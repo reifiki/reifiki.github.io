@@ -4,6 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rafael Guedes | Portfólio</title>
+
+  <!-- Biblioteca AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,8 +22,21 @@
       margin: 0;
       padding: 2rem;
     }
+    body {
+  padding-top: 80px; /* espaço para navbar fixa */
+}
+
+nav a {
+  color: #79C0FF;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #58A6FF;
+}
   
-    
+
     header {
       text-align: center;
       margin-bottom: 3rem;
@@ -55,6 +78,26 @@
 
 </head>
 <body>
+  <nav style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #161B22;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  ">
+    <a href="#sobre">Sobre</a>
+    <a href="#educacao">Educação</a>
+    <a href="#competencias">Competências</a>
+    <a href="#experiencia">Experiência</a>
+    <a href="#projetos">Projetos</a>
+  </nav>
+
   <header>
     <h1>Rafael Guedes</h1>
     <p class="contact">
@@ -63,14 +106,14 @@
     </p>
   </header>
 
-<section class="section" id="sobre">
+<section class="section" id="sobre" data-aos="fade-up">
   <h2>Sobre Mim</h2>
   <p>
     Finalista da Licenciatura em Informática e Gestão de Empresas no ISCTE, com perfil proativo, adaptável e focado em soluções. Busco uma oportunidade em part-time para aplicar competências interpessoais, organizacionais e espírito de equipa num ambiente profissional.
   </p>
 </section>
 
-<section class="section" id="educacao">
+<section class="section" id="educacao" data-aos="fade-up">
   <h2>Educação</h2>
   <ul>
     <li>
@@ -84,7 +127,7 @@
   </ul>
 </section>
 
-<section class="section" id="competencias">
+<section class="section" id="competencias" data-aos="fade-up">
   <h2>Competências</h2>
   <ul>
     <li><strong>Interpessoais:</strong> Comunicação clara e empática</li>
@@ -95,7 +138,7 @@
   </ul>
 </section>
 
-<section class="section" id="experiencia">
+<section class="section" id="experiencia" data-aos="fade-up">
   <h2>Experiência Relevante</h2>
   <ul>
     <li><strong>Projetos Académicos:</strong> Desenvolvimento de soluções práticas em equipa, com foco em organização e cumprimento de prazos</li>
@@ -103,7 +146,7 @@
   </ul>
 </section>
 
-  <section class="section" id="conhecimentos">
+  <section class="section" id="conhecimentos" data-aos="fade-up">
     <h2>Conhecimentos</h2>
     <ul>
       <li>Em breve...</li>
